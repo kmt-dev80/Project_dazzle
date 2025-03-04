@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style-bd/dazzle-bd.css">
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <title>Dazzle</title>
@@ -447,57 +448,65 @@
             <h4 class="col">Best Deal Products</h4>
             <button class="col-auto me-3 bt-1" type="button">SEE ALL</button>
         </div>
-        <div class="row mt-4 d-flex justify-content-between">
-            <div class="col-3 mb-4 d-flex flex-column">
+        <div class="row mt-2">
+            <div class="d-flex justify-content-end">
+                <select id="sortPrice" class="form-select w-auto">
+                    <option value="high">Highest Price</option>
+                    <option value="low">Lowest Price</option>
+                </select>
+            </div>
+        </div>
+        <div class="row mt-2 d-flex justify-content-between" id="productList">
+            <div class="col-3 mb-4 d-flex flex-column sortp">
                 <div class="card position-relative">
                     <a href="#" class="text-decoration-none d-block">
                         <img src="slider image/iphone-16-price-in-bangladesh.png" class="card-img-top" alt="iPhone 16">
                         <div class="card-body">
                             <h6 class="card-title text-center">iPhone 16</h6>
                         </div>
-                        <p class="text-center">1000$<small class="text-decoration-line-through"> 900$</small></p>
+                        <p class="text-center price-tag">1000$<small class="text-decoration-line-through"> 900$</small></p>
                     </a>
                     <span class="top-left1">38%</span>
                     <span class="top-right1">Hot Product</span>
                     <button type="button" class="border-top-0 border-start-0 border-end-0 btn w-100 rounded-0">Select Option</button>
                 </div>
             </div>
-            <div class="col-3 mb-4 d-flex flex-column">
+            <div class="col-3 mb-4 d-flex flex-column sortp">
                 <div class="card position-relative">
                     <a href="#" class="text-decoration-none d-block">
                         <img src="slider image/iphone-16-pro-max--natural-price-in-bangladesh.png" class="card-img-top" alt="iPhone 16 Pro Max">
                         <div class="card-body">
                             <h6 class="card-title text-center">iPhone 16 Pro Max</h6>
                         </div>
-                        <p class="text-center">1100$<small class="text-decoration-line-through"> 1000$</small></p>
+                        <p class="text-center price-tag">1100$<small class="text-decoration-line-through"> 1000$</small></p>
                     </a>
                     <span class="top-left1">30%</span>
                     <span class="top-right1">Top Selling</span>
                     <button type="button" class="border-top-0 border-start-0 border-end-0 btn w-100 rounded-0">Select Option</button>
                 </div>
             </div>
-            <div class="col-3 mb-4 d-flex flex-column">
+            <div class="col-3 mb-4 d-flex flex-column sortp">
                 <div class="card position-relative">
                     <a href="#" class="text-decoration-none d-block">
                         <img src="slider image/iphone-16-Ultramarine-price-in-bangladesh.png" class="card-img-top" alt="iPhone 16 Ultramarine">
                         <div class="card-body">
                             <h6 class="card-title text-center">iPhone 16 Ultramarine</h6>
                         </div>
-                        <p class="text-center">1200$<small class="text-decoration-line-through"> 1000$</small></p>
+                        <p class="text-center price-tag">1200$<small class="text-decoration-line-through"> 1000$</small></p>
                     </a>
                     <span class="top-left1">34%</span>
                     <span class="top-right1">Best Selling</span>
                     <button type="button" class="border-top-0 border-start-0 border-end-0 btn w-100 rounded-0">Select Option</button>
                 </div>
             </div>
-            <div class="col-3 mb-4 d-flex flex-column">
+            <div class="col-3 mb-4 d-flex flex-column sortp">
                 <div class="card position-relative">
                     <a href="#" class="text-decoration-none d-block">
                         <img src="slider image/Samsung-Galaxy-S25-Coral-Red-price-in-Bangladesh.png" class="card-img-top" alt="Samsung Galaxy S25">
                         <div class="card-body">
                             <h6 class="card-title text-center">Samsung Galaxy S25</h6>
                         </div>
-                        <p class="text-center">900$<small class="text-decoration-line-through"> 800$</small></p>
+                        <p class="text-center price-tag">900$<small class="text-decoration-line-through"> 800$</small></p>
                     </a>
                     <span class="top-left1">30%</span>
                     <span class="top-right1">Most Popular</span>
@@ -865,7 +874,7 @@
         </div>
     </div>
         
-    
+    <script src="jScript_bd/jscript.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>

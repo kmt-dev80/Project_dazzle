@@ -288,6 +288,9 @@
    border: 1px solid #734c4c;
     border-radius:0 5px 0 5px ;
   }
+  #sortPrice {
+    font-size: x-small;
+  }
 /*3rd container end here*/
 
 .card .top-left {
