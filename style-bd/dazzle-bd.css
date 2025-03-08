@@ -1,70 +1,18 @@
 /*Header design*/
-
-.row.text-light.py-2{
-    display: flex;
-    flex-wrap: nowrap; /* Prevents any wrapping */
-    align-items: center;
-    justify-content: space-between;
-}
-
-.input-group .form-control {
-    border-radius: 8px 0 0 8px;
-    border: none;
-    padding: 6px 10px;
-    font-size: 14px;
-    flex-shrink: 1; /* Ensures it doesn't take too much space */
-}
-
-.input-group .search-btn {
-    background-color: #E7D0B8;
-    border: none;
-    padding: 4px 8px;
-    border-radius: 0 8px 8px 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background-color 0.3s;
-    flex-shrink: 0;
-}
-
-.input-group .search-btn:hover {
-    background-color: #d6b89a;
-}
-
-.rad {
-    display: flex;
-    flex-wrap: nowrap; /* Ensures links never wrap */
-    justify-content: flex-end;
-    gap: 5px;
-    flex-shrink: 0;
-}
-
-.rad a {
+.col-auto.fh a{
+    text-decoration: none;
+    font-size: 11px;
     border: 1px solid #E7D0B8;
     border-radius: 3px;
-    padding: 4px 8px;
-    text-decoration: none;
-    color: #fff;
-    font-size: 12px;
-    min-width: 80px; /* Prevents buttons from shrinking too much */
-    text-align: center;
-    white-space: nowrap; /* Ensures text stays in one line */
-    transition: background-color 0.3s, color 0.3s;
-    flex-shrink: 0;
-}
-
-.rad a:hover {
+    margin-left: 4px;
+    padding: 6px 8px;
+    color: #ffe699;
+} 
+ .col-auto.fh a:hover {
     background-color: #E7D0B8;
-    color: #000;
+    color:#b366ff;
 }
-
-.rad i.bi-gift {
-    color: #e08830;
-    font-size: 12px;
-    position: relative;
-    top: -5px;
-    left: -9px;
-}
+  
 /*Category col-1 Menu Style*/
  /* Floating Button */
  .floating-menu {
@@ -120,15 +68,6 @@
 /*Category col-11 style*/
 .bg-col {
     background-color: antiquewhite;
-}
-
-
-
-.m-list {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    width: 100%;
 }
 
 .m-list a {
