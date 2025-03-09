@@ -172,6 +172,10 @@
     text-decoration: none;
     border: 1px solid #ddd; /* Optional: Add border for better visual separation */
 }
+.cd1 .card:hover{
+    scale: 1.04;
+    transition: ease-in-out 0.2s;
+  }
 
 .cd1 .card .card-img-top {
     height: 100px; /* Fixed height for images */
@@ -284,9 +288,10 @@ justify-content: space-between; /* Space out content */
 padding: 1rem; /* Consistent padding */
 }
 
-.sortp  .card .card-body .card-title {
+.sortp  .card .card-title {
 font-size: 1rem;
 margin-bottom: 0.5rem;
+color: #000;
 }
 
 .price-tag {
@@ -309,6 +314,8 @@ margin-bottom: 0.5rem;
 }
 .sortp  .card .card-body .btn-sm:hover{
     background-color: #734c4c;
+    scale: 1.04;
+    transition: ease-in-out 0.2s;
     color: #c4d4d4;
 }
 /* 3rd container end here  */
