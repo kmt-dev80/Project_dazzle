@@ -4,39 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style-bd/dazzle-bd.css">
-    
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style-bd/nav_var.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <title>Dazzle</title>
     
 </head>
 <body>
     <!-- Header Section -->
-    <div class="container-fluid bg-dark"><!-- sticky-top -->
+    <nav class="navbar navbar-expand-lg custom-navbar">
         <div class="container">
-            <div class="row text-light py-2 d-flex align-items-center">
-                <!-- Brand Name -->
-                <div class="col-auto flex-shrink-0">
-                    <a class="fw-bold fs-4 text-light text-decoration-none" href="dazzle_bd.html">dazzle&trade;</a>
-                </div>
-                <!-- Search Bar -->
-                <div class="col">
-                    <div class="input-group">
-                          <!-- Search Icon as addon -->
-                        <input type="text" class="form-control" placeholder="Search..." aria-label="Search">
-                        <button class="btn btn-outline-secondary">
-                            <i class="bi bi-search"></i>
-                        </button>
-                    </div>
-                </div>
-                <!-- Navigation Links (NO WRAP) -->
-                <div class="col-auto fh">
-                    <a href="#"><i class="bi bi-gift"></i>&nbsp;OFFER</a>
-                    <a href="pre_order.html">PRE-ORDER</a>
-                    <a href="#"><i class="bi bi-cart2"></i>&nbsp;CART</a>
-                    <a href="log_in.html">LOGIN</a>
+            <a class="navbar-brand me-3" href="dazzle_bd.html">dazzle&trade;</a>
+            <div class="d-lg-none d-flex align-items-center flex-grow-1 me-3">
+                <div class="input-group">
+                    <input type="text" class="search-box form-control" placeholder="Search products...">
+                    <button class="search-btn" aria-label="Search">
+                        <i class="bi bi-search"></i>
+                    </button>
                 </div>
             </div>
+            <button class="navbar-toggler menu-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+                <i class="bi bi-list"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="desktopMenu">
+                <div class="d-none d-lg-flex flex-grow-1 mx-3 align-items-center">
+                    <input type="text" class="search-box form-control me-2" placeholder="Search products...">
+                    <button class="search-btn">
+                        <i class="bi bi-search"></i>
+                    </button>
+                </div>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="#">
+                            <i class="bi bi-gift"></i>&nbsp;OFFER
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="pre_order.html">PRE-ORDER</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="#">
+                            <i class="bi bi-cart2"></i>&nbsp;CART
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="log_in.html">LOGIN</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileMenu">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title">dazzle&trade;</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="list-unstyled" id="offcanvasMenu"></ul>
         </div>
     </div>
     <!-- Category Bar -->

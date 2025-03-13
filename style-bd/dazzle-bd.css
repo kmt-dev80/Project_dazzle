@@ -1,19 +1,5 @@
-/*Header design*/
-.col-auto.fh a{
-    text-decoration: none;
-    font-size: 11px;
-    border: 1px solid #E7D0B8;
-    border-radius: 3px;
-    margin-left: 4px;
-    padding: 6px 8px;
-    color: #ffe699;
-} 
- .col-auto.fh a:hover {
-    background-color: #E7D0B8;
-    color:#b366ff;
-}
   
-/*Category col-1 Menu Style*/
+  /*Category col-1 Menu Style*/
  /* Floating Button */
 
  .floating-menu {
