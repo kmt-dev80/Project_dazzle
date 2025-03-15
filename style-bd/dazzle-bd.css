@@ -147,6 +147,57 @@
 }
 
 /* Phone List Item Function - End here */
+/*ist container function*/
+ .container-grid {
+      display: grid;
+      gap: 5px; /* Spacing between grid items */
+      min-height: 400px;
+      margin-bottom: 20px; /* Fixed height for the container */
+    }
+
+    /* Default layout for small screens (mobile) */
+    .container-grid {
+      grid-template-areas:
+        "carousel"
+        "images";
+      grid-template-rows: auto 1fr; /* Carousel takes auto height, images take remaining space */
+    }
+
+    .carousel {
+      grid-area: carousel;
+    }
+
+    .images {
+      grid-area: images;
+      display: grid;
+      grid-template-columns: 1fr 1fr; /* Two columns for horizontal layout */
+      grid-template-rows: 1fr; /* Single row */
+      gap: 10px; /* Spacing between images */
+    }
+
+    /* Layout for medium screens and above (tablet and desktop) */
+    @media (min-width: 768px) {
+      .container-grid {
+        grid-template-areas:
+          "carousel images";
+        grid-template-columns: 7.5fr 4.5fr; /* 7:5 ratio for columns */
+        grid-template-rows: 1fr; /* Single row */
+      }
+
+      .images {
+        grid-template-columns: 1fr; /* Single column for vertical layout */
+        grid-template-rows: 1fr 1fr; /* Two rows, each taking 50% height */
+      }
+    }
+
+    /* Ensure images and carousel fill their containers */
+    .carousel img,
+    .images img {
+      width: 100%;
+      height: 100%;
+      object-fit: fill; /* Maintain aspect ratio */
+      border-radius: 8px; /* Rounded corners */
+    }
 
 /*2nd Container Function*/
 
