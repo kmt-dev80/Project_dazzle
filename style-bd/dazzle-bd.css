@@ -151,7 +151,7 @@
  .container-grid {
       display: grid;
       gap: 5px; /* Spacing between grid items */
-      min-height: 400px;
+      min-height: 350px;
       margin-bottom: 20px; /* Fixed height for the container */
     }
 
@@ -172,7 +172,7 @@
       display: grid;
       grid-template-columns: 1fr 1fr; /* Two columns for horizontal layout */
       grid-template-rows: 1fr; /* Single row */
-      gap: 10px; /* Spacing between images */
+      gap: 5px; /* Spacing between images */
     }
 
     /* Layout for medium screens and above (tablet and desktop) */
@@ -202,6 +202,12 @@
 /*2nd Container Function*/
 
 /* Ensure all cards have the same height and width */
+.cd1 {
+    display: grid;
+    gap: 5px; /* Adjust the gap between cards */
+    padding: 5px; /* Add padding around the grid */
+}
+
 .cd1 .card {
     height: 100%; /* Make cards fill the height of their container */
     text-align: center;
@@ -210,10 +216,11 @@
     text-decoration: none;
     border: 1px solid #ddd; /* Optional: Add border for better visual separation */
 }
-.cd1 .card:hover{
+
+.cd1 .card:hover {
     scale: 1.04;
     transition: ease-in-out 0.2s;
-  }
+}
 
 .cd1 .card .card-img-top {
     height: 100px; /* Fixed height for images */
@@ -228,39 +235,30 @@
     padding: 0.5rem; /* Reduce padding inside the card */
 }
 
-/* Reduce space between columns */
-.cd1 .row {
-    margin-left: -5px; /* Compensate for reduced column padding */
-    margin-right: -5px;
+/* Grid layout for different screen sizes */
+@media (max-width: 575.98px) {
+    .cd1 {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on extra small screens */
+    }
 }
 
-.cd1 .col-6,
-.cd1 .col-md-3,
-.cd1 .col-lg-8 {
-    padding-left: 5px; /* Reduce padding between columns */
-    padding-right: 5px;
+@media (min-width: 576px) and (max-width: 991.98px) {
+    .cd1 {
+        grid-template-columns: repeat(4, 1fr); /* 4 columns on small to medium screens */
+    }
 }
 
-/* Add bottom gap for columns on medium screens (4 cards per row) */
-@media (max-width: 991.98px) {
-    .cd1 .col-md-3 {
-        margin-bottom: 0.5rem; /* Reduce bottom gap between rows */
-    }  
-}
-
-/* Custom column width for 8 cards per row on large screens */
 @media (min-width: 992px) {
-    .cd1 .col-lg-8 {
-        flex: 0 0 12.5%; /* Each card takes up 12.5% of the row (100% / 8) */
-        max-width: 12.5%; /* Ensure the width doesn't exceed 12.5% */
-    }   
+    .cd1 {
+        grid-template-columns: repeat(8, 1fr); /* 8 columns on large screens */
+    }
 }
 
   
 .bt-1 {
     background-color: rgb(167, 163, 163) !important;
     border: none;
-    font-size: 11px;
+    font-size: 10px;
     padding: 8px 12px !important;
     border-radius: 8px !important;
     font-weight: bold;
@@ -445,12 +443,13 @@ margin-bottom: 0.5rem;
 }
 /* 3rd container end here  */
 /*Start 6th container here*/
+
+
 .fixh img {
-    height: 300px;/* Match the height of the image to the .bd-top container */
+    height: 300px;
     width: 100%;
     object-fit: fill;
 }
-
 
 .bd-top {
     border-top: 70px solid #d4b89f;
@@ -459,55 +458,38 @@ margin-bottom: 0.5rem;
     border-bottom: 25px solid #d4b89f;
     border-radius: 10px;
     background-color: antiquewhite;
-    height: 300px; /* Match the height of the image */
+    height: 300px;
     overflow-y: auto;
 }
+
 .col-5 .bd-top .card {
-    height: 100px; 
+    height: 100px;
     display: flex;
     align-items: center;
     text-decoration: none;
     border: 1px solid #ddd;
 }
 
-/* Adjust the image size */
 .card-img-fixed {
-    height: 60px; 
-    width: auto; 
+    height: 60px;
+    width: auto;
     object-fit: cover;
 }
 
-/* Reduce padding and margins in the card body */
 .col-8 .card-body {
     padding: 0.5rem;
     margin: 0;
 }
 
-/* Adjust the font size of the title and text */
 .col-8 .card-title {
     font-size: 0.9rem;
-    margin-bottom: 0.25rem; 
-}
-
-.card-text {
-    font-size: 0.8rem;
     margin-bottom: 0.25rem;
 }
 
-/*6th Container end here*/
-
-
-/*9th Container*/
-.brand-img {
-    width: 120px; 
-    height: 120px;  
-    object-fit: contain; 
-    padding: 2px; 
+.col-8 .card-body .card-text {
+    font-size: 0.8rem;
+    margin-bottom: 0.25rem;
 }
-/*9th Container end here*/
-
-
-
 /* Position the overflow*/
 .overflow-text {
     position: absolute;
@@ -520,6 +502,72 @@ margin-bottom: 0.5rem;
 .overflow-text i {
     color: rgb(209, 116, 40);
 }
+@media (max-width: 575px) {
+    .fixh img {
+        height: 200px; /* Reduced height for small screens */
+    }
+
+    .bd-top {
+        height: 200px; /* Reduced height for small screens */
+        border-top: 40px solid #d4b89f;
+        border-left: 20px solid #d4b89f;
+        border-right: 20px solid #d4b89f;
+        border-bottom: 20px solid #d4b89f;
+        border-radius: 10px;
+        background-color: antiquewhite;
+    }
+    .overflow-text {
+        position: absolute;
+        top: -195px;
+        left: 5%;
+        font-size: x-small;
+        transform: translateX(-50%);
+        padding: 2px 5px;
+    }
+    
+    .overflow-text i {
+        color: rgb(209, 116, 40);
+    }
+    .col-5 .bd-top .card {
+        height: 60px;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        border: 1px solid #ddd;
+    }
+    
+    .card-img-fixed {
+        height: 50px;
+        width: auto;
+        object-fit: cover;
+    }
+    
+    .col-8 .card-body {
+        padding: 0.5rem;
+        margin: 0;
+    }
+    
+    .col-8 .card-title {
+        font-size: 0.6rem;
+        margin-bottom: 0.20rem;
+    }
+    
+    .col-8 .card-body .card-text {
+        font-size: 0.5rem;
+        margin-bottom: 0.20rem;
+    }
+}
+
+/*6th Container end here*/
+
+
+/*9th Container*/
+
+/*9th Container end here*/
+
+
+
+
 .social-icons i {
     font-size: 24px; /* Adjust size if needed */
     margin: 0 4px; /* Add spacing between icons */
