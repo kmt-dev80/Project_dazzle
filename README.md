@@ -5,7 +5,7 @@ A complete, responsive e-commerce website for electronics featuring smartphones,
 ![Screenshot (3)](https://github.com/user-attachments/assets/f9ddfa0c-ae81-4ba7-9a5b-020efca35edd)
 
 ## 🚀 Live Demo
-[View Live Demo](https://yourusername.github.io/dazzle-ecommerce/) *(Replace with your GitHub Pages link)*
+[View Live Demo](https://github.com/kmt-dev80/Project_dazzle.git)
 
 ## ✨ Key Features
 
@@ -38,10 +38,6 @@ A complete, responsive e-commerce website for electronics featuring smartphones,
 ## Installation 📥
 
 No installation needed! Simply open `dazle_bd.html` in any modern browser.
-
-## Live Demo 🌐
-
-[View Live Demo](https://github.com/kmt-dev80)
 
 ## License 📄
 
